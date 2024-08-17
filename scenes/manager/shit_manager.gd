@@ -17,7 +17,8 @@ func _ready():
 func spawn_initial_vials():
 	for i in range(number_of_vials):
 		var vial_instance = vial_scene.instantiate()
-		get_parent().add_child.call_deferred(vial_instance)
+		var entities_layer = get_tree().get_first_node_in_group("entities_layer")
+		entities_layer.add_child.call_deferred(vial_instance)
 		var random_position = Vector2(
 			randf_range(spawn_area.position.x, spawn_area.end.x),
 			randf_range(spawn_area.position.y, spawn_area.end.y)

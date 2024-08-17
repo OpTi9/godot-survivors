@@ -28,6 +28,11 @@ window/size/window_height_override=1080
 window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
+[global_group]
+
+foreground_layer=""
+entities_layer=""
+
 [input]
 
 move_left={
