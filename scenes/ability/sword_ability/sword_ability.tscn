@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjmr1ux5ttq4l"]
+[gd_scene load_steps=6 format=3 uid="uid://bjmr1ux5ttq4l"]
 
 [ext_resource type="Texture2D" uid="uid://d3fnhumuh0ljg" path="res://sword.png" id="1_61kay"]
-[ext_resource type="PackedScene" uid="uid://duxxcxbqbpo3n" path="res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn" id="1_b23dv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uxwfk"]
 size = Vector2(30, 30)
@@ -107,8 +106,6 @@ _data = {
 }
 
 [node name="SwordAbility" type="Node2D"]
-
-[node name="SwordAbilityController" parent="." instance=ExtResource("1_b23dv")]
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 4
