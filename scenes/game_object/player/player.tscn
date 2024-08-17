@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsstuiyid13g1"]
+
+[ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_eac3f"]
+[ext_resource type="Texture2D" uid="uid://bv2e4lddtky1r" path="res://scenes/game_object/player/player.png" id="1_t6cme"]
+[ext_resource type="PackedScene" uid="uid://ce668n0krw1sj" path="res://scenes/component/health_component.tscn" id="2_tusp0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sf7vm"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l6wdd"]
+radius = 5.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 0
+motion_mode = 1
+script = ExtResource("1_eac3f")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_tusp0")]
+
+[node name="AbilityManager" type="Node" parent="."]
+
+[node name="PickUps" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUps"]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_sf7vm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_t6cme")
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_l6wdd")
