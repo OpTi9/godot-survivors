@@ -1,5 +1,5 @@
 extends Node
-
+#Я пока отключил эту хуйню
 @export var sword_ability: PackedScene
 
 const MAX_RANGE = 150

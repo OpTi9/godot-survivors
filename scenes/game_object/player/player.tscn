@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_eac3f"]
 [ext_resource type="Texture2D" uid="uid://bv2e4lddtky1r" path="res://scenes/game_object/player/player.png" id="1_t6cme"]
-[ext_resource type="PackedScene" uid="uid://duxxcxbqbpo3n" path="res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn" id="2_m0jf5"]
+[ext_resource type="PackedScene" uid="uid://ce668n0krw1sj" path="res://scenes/component/health_component.tscn" id="2_tusp0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sf7vm"]
 radius = 20.0
@@ -15,9 +15,9 @@ collision_layer = 0
 motion_mode = 1
 script = ExtResource("1_eac3f")
 
-[node name="AbilityManager" type="Node" parent="."]
+[node name="HealthComponent" parent="." instance=ExtResource("2_tusp0")]
 
-[node name="SwordAbilityController" parent="AbilityManager" instance=ExtResource("2_m0jf5")]
+[node name="AbilityManager" type="Node" parent="."]
 
 [node name="PickUps" type="Area2D" parent="."]
 collision_layer = 16
